@@ -1,0 +1,50 @@
+* {
+    background-color: #f5ebe0;
+    margin: 0;
+    padding: 2px;
+    box-sizing: border-box;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#homepage {
+    border: 1px solid grey;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center; 
+
+}
+
+#search-key{
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1{
+    color: black;
+}
+
+#button{
+    border-radius: 10px;
+}
+
+#homeimg{
+    width: 300px;
+}
+
+.card{
+    border: 1px solid grey;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center; 
+}
+
+#searching, #error{
+    justify-content: center;
+    text-align: center; 
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
