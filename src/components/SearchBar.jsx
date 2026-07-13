@@ -1,16 +1,27 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { searchDishes } from "../services/api";
 
 function SearchBar() {
   const [dish, setDish] = useState("");
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!dish.trim()) return;
-
-    navigate(`/results?dish=${encodeURIComponent(dish)}`);
+    try{
+      const result = await searchDishes(dish);
+      if(result.results.lenght === 0){
+        setMessage("No matching dishes found.")
+        return;
+      }
+      navigate(`/results?dish=${encodeURIComponent(result.results[0])}`);
+    } catch (error){
+      setMessage("Unable to connect to the server, please try again");
+    }
+    //mockdata codepiece navigate(`/results?dish=${encodeURIComponent(dish)}`); 
   };
 
   return (

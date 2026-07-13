@@ -24,6 +24,12 @@ h1{
     color: black;
 }
 
+ul, li{
+    list-style-type: none;
+    column-count: 2;
+    place-items: center; 
+}
+
 #button{
     border-radius: 10px;
 }
@@ -35,7 +41,6 @@ h1{
 .card{
     border: 1px solid grey;
     border-radius: 5px;
-    justify-content: center;
     text-align: center; 
 }
 
@@ -43,8 +48,53 @@ h1{
     justify-content: center;
     text-align: center; 
 }
+
 table{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+#visual-card, #country-card, #allergen-card {
+    padding: 20px;
+}
+#country-card{
+    margin-top: 25px;
+}
+
+
+.chart {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 250px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.bar {
+    width: 45px;
+    background-color: #d6ccc2;
+    border-radius: 5px 5px 0 0;
+}
+
+.percent {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.label {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
 }
