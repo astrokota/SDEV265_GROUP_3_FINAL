@@ -7,13 +7,13 @@ function SearchBar() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!dish.trim()) return;
     try{
       const result = await searchDishes(dish);
-      if(result.results.lenght === 0){
+      if(result.results.length === 0){
         setMessage("No matching dishes found.")
         return;
       }
