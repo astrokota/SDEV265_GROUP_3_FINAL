@@ -11,7 +11,7 @@ def calculate_prevalence(dish_name: str, db: Session) -> DishPrevalenceResponse:
     in each, and returns a DishPrevalenceResponse with prevalence
     percentages per allergen.
     """
-    recipes = db.query(Recipe).filter(Recipe.dish_name == dish_name).all()
+    recipes = db.query(Recipe).filter(Recipe.dish_name.ilike(dish_name)).all()
     recipe_count = len(recipes)
 
     if recipe_count == 0:
