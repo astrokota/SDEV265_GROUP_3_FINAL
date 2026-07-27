@@ -19,9 +19,9 @@ function SearchBar() {
       }
       navigate(`/results?dish=${encodeURIComponent(result.results[0])}`);
     } catch (error){
-      setMessage("Unable to connect to the server, please try again");
+      setMessage("Unable to connect to the server, please try again.");
     }
-    //mockdata codepiece navigate(`/results?dish=${encodeURIComponent(dish)}`); 
+    
   };
 
   return (
@@ -38,7 +38,8 @@ function SearchBar() {
         />
 
         <button type="submit" id="buttom" >Search</button>
-      </form>
+      </form> <br/>
+      {message && <p className="error-message">{message}</p>}
     </div>
   );
 }

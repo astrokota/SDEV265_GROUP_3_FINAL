@@ -47,7 +47,7 @@ function Results(){
         return <div className="empty-state">
             <h2>No dish found</h2>
             <p>We couldn't find any recipes that matched "{dish}"</p>
-            <Link to="../pages/Home">
+            <Link to="/">
                 <button>Search Again</button>
             </Link>
 
@@ -57,7 +57,7 @@ function Results(){
     return(
     <div id= "results-card"> 
         <h1>Search Results</h1><br/>
-        <AllergenCard data ={mockData}/> <br/>
+        <AllergenCard data ={data}/> <br/>
         <AllergenPercentages allergens={data.allergens} />
         <CountryComparison countries={mockData.countries}/>
         <footer>
@@ -69,27 +69,3 @@ function Results(){
 }
 
 export default Results;
-
-
-{/*codepiece for mockdata testing
-    
-    useEffect(()=>{setLoading(true); setError("");
-        setTimeout (()=>
-        {
-            if(dish && dish.toLowerCase() === mockData.dish.toLowerCase())
-            {
-                setData(mockData);
-            } else{
-                setData(null);
-                setError("No results found.")
-            }
-            setLoading(false);
-        },1000);
-    }, [dish]);
-
-    if(loading){
-        return <h2 id="searching">Searching...</h2>
-    }
-    if(error){
-        return <h2 id="error">{error}</h2>
-    }    */}
