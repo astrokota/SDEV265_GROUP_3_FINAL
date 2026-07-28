@@ -3,6 +3,14 @@
 
 MVP product: A user can open the React app, search for a dish, and see an estimated allergen prevalence breakdown based on recipes stored in SQLite. The backend uses FastAPI to calculate prevalence from normalized ingredients and allergen keyword matches. The app includes documentation, test cases, and a clear explanation that results are estimates, not medical allergy guidance.
 
+Currently, this MVP supports the following dishes to be searched:
+
+Pad Thai
+Brownies
+Chicken Satay
+Almond Cake
+Green Salad
+
 ## Setup Instructions
 
 These instructions explain how to install and run the Allergen Risk Analyzer application locally. The application uses a Python FastAPI backend with a SQLite database and a React frontend. The backend must be running before the frontend can retrieve live allergen prevalence results.
