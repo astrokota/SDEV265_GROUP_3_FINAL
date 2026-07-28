@@ -98,3 +98,9 @@ table{
     text-align: center;
     font-size: 14px;
 }
+
+.error-message {
+    color: rgb(144, 15, 15);
+    margin-top: 10px;
+    font-weight: bold;
+}

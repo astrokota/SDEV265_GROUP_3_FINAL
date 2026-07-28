@@ -8,7 +8,6 @@ function AllergenCard ({data})
         <ul>
             {data.allergens.map((item) => (<li key={item.allergen}>
                 <strong>{item.allergen}</strong><br/>
-                {/*Prevalence: {item.prevalence}% <br/> */}
                 <small>Found in {item.matched_recipes} recipes</small>
                 </li>
             ))}
