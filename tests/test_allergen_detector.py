@@ -19,7 +19,7 @@ def test_tree_nut_detection():
 
     try:
         test_ingredients = [
-            "1 cup almost flour",
+            "1 cup almond flour",
             "chopped walnuts",
             "roasted cashews",
         ]
